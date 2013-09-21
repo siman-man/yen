@@ -9,7 +9,8 @@ class Integer
   def to_j(type = :positional)
     cardinal = %w(零 一 二 三 四 五 六 七 八 九)
     base_unit = %w(十 百 千)
-    unit = %w(万 億 兆 京 垓 予 穣 溝 澗 正 裁 極 恒河沙 阿僧祇 那由多 不可思議 無量大数 洛叉 倶胝)
+    unit = %w(万 億 兆 京 垓 予 穣 溝 澗 正 裁 極 恒河沙 阿僧祇 那由多 不可思議 無量大数)
+    float_unit = %w(割 分 厘 毛 糸 忽 微 繊 沙 塵 埃 緲 漠 模糊 逡巡 須臾 瞬息 断指 刹那 六徳 虚 空 清 浄)
 
     return (type == :positional)? "0" : "零" if self.zero?
 
