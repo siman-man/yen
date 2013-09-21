@@ -10,9 +10,9 @@ install it yourself as:
 
 ## Usage
 
+```ruby
 require 'yen'
 
-```ruby
 10000.to_j                  #=> 1万
 10000.to_j(:all)            #=> 一万
 
