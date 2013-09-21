@@ -1,6 +1,6 @@
 # Yen
 
-TODO: Write a gem description
+数値を日本語表記に変換するgemです。
 
 ## Installation
 
