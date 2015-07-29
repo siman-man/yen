@@ -1,9 +1,12 @@
+# encoding: utf-8
+
 require 'spec_helper'
 require 'yen'
 
 describe "Test for to_j method" do
   describe "to_j :all option" do
     it "between 0 - 1万" do
+      expect(0.to_j(:all)).to eq("零")
       expect(0.to_j(:all)).to eq("零")
       expect(1.to_j(:all)).to eq("一")
       expect(2.to_j(:all)).to eq("二")
@@ -106,20 +109,21 @@ describe "Test for to_j method" do
     end
 
     it "between 1兆 - 1垓" do
-      1000000000000.to_j(:all).should == "一兆"
-      1000000000001.to_j(:all).should == "一兆一"
-      1000100010001.to_j(:all).should == "一兆一億一万一"
-      2000000000000.to_j(:all).should == "二兆"
-      10000000000000000.to_j(:all).should == "一京"
-      10000000000000001.to_j(:all).should == "一京一"
-      10001000000000001.to_j(:all).should == "一京一兆一"
-      12345678912345678.to_j(:all).should == "一京二千三百四十五兆六千七百八十九億一千二百三十四万五千六百七十八"
-      100000000000000000000.to_j(:all).should == "一垓"
+      expect(1000000000000.to_j(:all)).to eq("一兆")
+      expect(1000000000001.to_j(:all)).to eq("一兆一")
+      expect(1000100010001.to_j(:all)).to eq("一兆一億一万一")
+      expect(2000000000000.to_j(:all)).to eq("二兆")
+      expect(10000000000000000.to_j(:all)).to eq("一京")
+      expect(10000000000000001.to_j(:all)).to eq("一京一")
+      expect(10001000000000001.to_j(:all)).to eq("一京一兆一")
+      expect(12345678912345678.to_j(:all)).to eq("一京二千三百四十五兆六千七百八十九億一千二百三十四万五千六百七十八")
+      expect(100000000000000000000.to_j(:all)).to eq("一垓")
     end
   end
 
   describe "test to_j positional option" do
     it "between 0 - 9999" do
+      expect(nil.to_j).to eq("0")
       expect(0.to_j).to eq("0")
       expect(1.to_j).to eq("1")
       expect(2.to_j).to eq("2")

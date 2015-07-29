@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Yen::VERSION
   spec.authors       = ["siman-man"]
   spec.email         = ["k128585@ie.u-ryukyu.ac.jp"]
-  spec.description   = "this is convert integer to yen."
+  spec.description   = "this is convert integer to yen"
   spec.summary       = "this is convert integer to yen."
   spec.homepage      = "https://github.com/siman-man/yen"
   spec.license       = "MIT"

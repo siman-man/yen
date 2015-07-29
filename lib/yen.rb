@@ -1,6 +1,16 @@
 # encoding: utf-8
 require "yen/version"
 
+class NilClass
+  def to_yen(type = :positional)
+    0.to_yen(type)
+  end
+
+  def to_j(type = :positional)
+    0.to_j(type)
+  end
+end
+
 class Integer
   def to_yen(type = :positional)
     self.to_j(type) + "円"
